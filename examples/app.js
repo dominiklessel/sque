@@ -23,39 +23,42 @@ queue.getAttributes(['ApproximateNumberOfMessages'], function( err, attribute ) 
   console.log( attribute );
 });
 
-// get specific queue attribute
+// get multiple specific queue attributes
 queue.getAttributes(['VisibilityTimeout', 'ApproximateNumberOfMessagesNotVisible'], function( err, attributes ) {
   if ( err ) return console.log( err );
   console.log( attributes );
 });
 
 /**
- * Queue messages
+ * Queue subscription
  */
 
+// subscribe
 queue.subscribe({
   interval : 5000 // 5s polling interval; defaults to 10s if not sets
 });
 
-queue.on('message', function( message ) {
+var messageCallback = function( message ) {
   console.log( 'queue message:' );
   console.dir( message );
-  
-  // ... do stuff with your message ...
-  
+  // ... do stuff with the message ...
   queue.deleteMessage( message.ReceiptHandle, function( err, success ) {
     if ( err ) return console.log( err );
     console.log( 'Hooray!' );
     console.dir( success );
   });
+};
+queue.on( 'message', messageCallback );
 
-});
-
-queue.on('message error', function( err ) {
+var messageErrorCallback = function( err ) {
   console.log( 'queue message error: ' );
   console.dir( err );
-});
+};
+queue.on( 'message error', messageErrorCallback );
 
-setTimeout(function(){
+// unsubscribe
+setTimeout(function() {
   queue.unsubscribe();
+  queue.removeListener( 'message', messageCallback );
+  queue.removeListener( 'message error', messageErrorCallback );
 },20000);
