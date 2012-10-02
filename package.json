@@ -2,6 +2,7 @@
   "name"          : "Sque",
   "version"       : "0.0.1",
   "description"   : "A painless interface to Amazons SQS",
+  "keywords"      : ["amazon", "aws", "sqs", "queue"],
   "author"        : "Dominik Lessel <dominik@rocketeleven.de>",
   "dependencies"  : {
     "async"   : "0.1.22",
