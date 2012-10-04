@@ -1,6 +1,6 @@
 {
   "name"          : "sque",
-  "version"       : "0.0.1",
+  "version"       : "0.0.2",
   "description"   : "A painless interface to Amazons SQS",
   "keywords"      : ["amazon", "aws", "sqs", "queue"],
   "author"        : "Dominik Lessel <dominik@rocketeleven.de>",
