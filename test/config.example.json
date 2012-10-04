@@ -1,0 +1,7 @@
+{
+  "AWS" : {
+    "Key"     : "<AWS Key>",
+    "Secret"  : "<AWS Secret>"
+  }
+  "Queue"     : "<AWS SQS queue url>"
+}

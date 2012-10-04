@@ -30,6 +30,27 @@ queue.getAttributes(['VisibilityTimeout', 'ApproximateNumberOfMessagesNotVisible
 });
 
 /**
+ * Send message(s)
+ */
+
+// single message
+queue.sendMessage({ foo : 'bar' }, function( err, messageInformation ) {
+  if ( err ) return console.log( err );
+  console.log( messageInformation );
+});
+
+// multiple messages
+var messages = [
+  { foo : 'bar' },
+  { bar : 'foo' }
+];
+queue.sendMessages(messages, function( err, messageInformations ) {
+  if ( err ) return console.log( err );
+  console.dir( messageInformations );
+});
+
+
+/**
  * Queue subscription
  */
 
