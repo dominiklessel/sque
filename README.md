@@ -6,14 +6,16 @@ Sque is painless interface to Amazons SQS, built for [node.js](http://nodejs.org
 
 **Current features:**
 
-- GetQueueAttributes
-- ReceiveMessage
-- DeleteMessage
+- 0.0.2 - SendMessage
+- 0.0.2 - SendMessageBatch
+- 0.0.1 - GetQueueAttributes
+- 0.0.1 - ReceiveMessage
+- 0.0.1 - DeleteMessage
 
 **Feature roadmap:**
 
 1. ListQueues / GetQueueUrl / CreateQueue / DeleteQueue / SetQueueAttributes
-2. SendMessage / SendMessageBatch / DeleteMessageBatch / ChangeMessageVisibility / ChangeMessageVisibilityBatch
+2. DeleteMessageBatch / ChangeMessageVisibility / ChangeMessageVisibilityBatch
 3. AddPermission / RemovePermission
 
 ## Installation
