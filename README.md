@@ -1,4 +1,6 @@
-# Sque
+# OUTDATED! Sque
+
+**Instead use AWS' SDK: [aws-sdk-js](https://github.com/aws/aws-sdk-js/)**
 
 Sque is painless interface to Amazons SQS, built for [node.js](http://nodejs.org).
 
@@ -94,7 +96,7 @@ setTimeout(function() {
 
 (The MIT License)
 
-Copyright (c) 2012 rocket eleven GmbH <dominik@rocketeleven.de>
+Copyright (c) 2014 mifitto GmbH <dominik@mifitto.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
